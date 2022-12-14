@@ -89,7 +89,82 @@
                     </ul>
                </p>
                <i>https://help.adobe.com/es_ES/as3/learn/WS5b3ccc516d4fbf351e63e3d118a9b90204-8000.html</i><br><br>
-                <li>Fundamentos de Actionscript</li>
+                <li>Fundamentos de Actionscript</li><br>
+                <p>
+                    ¿Para qué sirven los programas informáticos?<br><br>
+                    En primer lugar, resulta útil entender qué es un programa informático y para qué sirve. Un programa informático se caracteriza por dos aspectos principales:<br><br>
+
+                    Un programa es una serie de instrucciones o pasos que debe llevar a cabo el equipo.<br><br>
+
+                    Cada paso implica en última instancia la manipulación de información o datos.<br><br>
+
+                    En general, un programa informático es simplemente una lista de instrucciones paso a paso que se dan al equipo para que las lleve a cabo una a una. Cada una de las instrucciones se denomina sentencia. En ActionScript, todas las sentencias se escriben con un punto y coma al final.<br><br>
+
+                    Lo que realiza básicamente una instrucción dada en un programa es manipular algún bit de datos almacenado en la memoria del equipo. Un ejemplo sencillo consiste en ordenar al equipo que añada dos números y almacene el resultado en su memoria. En un caso más complejo, se podría tener un rectángulo dibujado en la pantalla y escribir un programa para moverlo a algún otro lugar de la pantalla. El equipo recuerda determinada información relativa al rectángulo: las coordenadas x e y que indican su ubicación, la anchura y altura, el color, etc. Cada uno de estos bits de información se almacena en algún lugar de la memoria del equipo. Un programa para mover el rectángulo a una ubicación diferente podría incluir pasos como “cambiar la coordenada x a 200; cambiar la coordenada y a 150”. Es decir, especificando nuevos valores para las coordenadas x e y. En segundo plano, el equipo procesa estos datos de algún modo para convertir realmente estos números en la imagen que aparece en pantalla. Sin embargo, en el nivel básico de detalle que interesa, basta con saber que el proceso de “mover un rectángulo en pantalla” únicamente implica un cambio de bits de datos en la memoria del equipo.<br><br>
+
+                    Variables y constantes<br><br>
+                    Principalmente la programación implica el cambio de partes de información en la memoria del equipo. Por lo tanto, resulta importante disponer de algún modo de representar una sola parte de información en un programa. Una variable es un nombre que representa un valor en la memoria del equipo. Cuando se escriben sentencias para manipular valores, se escribe el nombre de la variable en lugar del valor; cuando el equipo ve el nombre de la variable en el programa, busca en su memoria y utiliza el valor que allí encuentra. Por ejemplo, si hay dos variables denominadas value1 y value2, cada una de las cuales contiene un número, para sumar esos dos números se puede escribir la siguiente sentencia:<br><br>
+                    <code>value1 + value2</code><br><br>
+                    Cuando lleve a cabo los pasos indicados, el equipo buscará los valores de cada variable y los sumará.<br><br>
+
+                    En ActionScript 3.0, una variable se compone realmente de tres partes distintas:<br>
+                    <ul>
+                        <li> El nombre de la variable</li>
+                        <li>El tipo de datos que puede almacenarse en la variable</li>
+                        <li>El valor real almacenado en la memoria del equipo<</li>
+                    </ul><br><br>
+
+                    Se acaba de explicar el modo en que el equipo utiliza el nombre como marcador de posición del valor. El tipo de datos también es importante. Cuando se crea una variable en ActionScript, se determina el tipo específico de datos que va a incluir. A partir de aquí, las instrucciones del programa sólo pueden almacenar ese tipo de datos en la variable. El valor se puede manipular con las características particulares asociadas a su tipo de datos. En ActionScript, para crear una variable (se conoce como declarar la variable), se utiliza la sentencia var:<br><br>
+                    <code>var value1:Number;</code><br><br>
+
+                    Con este ejemplo se indica al equipo que cree una variable denominada value1, que sólo puede incluir datos Number. (“Number” es un tipo de datos específico definido en ActionScript.) También es posible almacenar un valor directamente en la variable:<br><br>
+
+                    <code>var value2:Number = 17;</code><br><br>
+
+                    Adobe Flash Professional<br><br>
+                    En Flash Professional existe otra forma posible de declarar una variable. Cuando se coloca un símbolo de clip de película, un símbolo de botón o un campo de texto en el escenario, se le puede asignar un nombre de instancia en el inspector de propiedades. En segundo plano, Flash Professional crea una variable con el mismo nombre que la instancia. Este nombre se puede utilizar en el código ActionScript para representar a ese elemento del escenario. Por ejemplo, supongamos que se dispone de un símbolo de clip de película en el escenario y se le asigna el nombre de instancia rocketShip. Siempre que se utilice la variable rocketShip en el código ActionScript, en realidad se está manipulando ese clip de película.<br><br>
+
+                    Una constante es similar a una variable. Se trata de un nombre que representa un valor en la memoria del equipo con un tipo especifico de datos. La diferencia es que a una constante sólo se le puede asignar un valor cada vez en el curso de una aplicación ActionScript. Tras asignar un valor a una constante, éste permanecerá invariable en toda la aplicación. La sintaxis para declarar una constante es prácticamente la misma que para la declaración de una variable. La única diferencia radica en que se utiliza la palabra clave const en lugar de var:<br><br>
+
+                    <code>const SALES_TAX_RATE:Number = 0.07;</code><br><br>
+                    Una constante resulta útil para definir un valor que se utilizará en varios puntos de un proyecto y que no cambiará en circunstancias normales. Cuando se utiliza una constante en lugar de un valor literal el código resulta más legible. Por ejemplo, dos versiones del mismo código. En uno se multiplica un precio por SALES_TAX_RATE. En el otro el precio se multiplica por 0.07. La versión que utiliza la constante SALES_TAX_RATE resulta más fácil de entender. Asimismo, supongamos que cambia el valor definido por la constante. Si se utiliza una constante para representar el valor en el proyecto, el valor se puede cambiar en un lugar (la declaración de la constante). Por el contrario, tendría que modificarse en distintos lugares cuando se utilizan valores literales especificados en el código.<br><br>
+
+                    Tipos de datos<br><br>
+                    En ActionScript, hay muchos tipos de datos que pueden utilizarse como el tipo de datos de las variables que se crean. Algunos de estos tipos de datos se pueden considerar “sencillos” o “fundamentales”:<br><br>
+
+                    <ul>
+                        <li>String: un valor de texto como, por ejemplo, un nombre o el texto de un capítulo de un libro</li>
+                        <li>Numeric: ActionScript 3.0 incluye tres tipos de datos específicos para datos numéricos:</li>
+                        <li>Number: cualquier valor numérico, incluidos los valores fraccionarios o no fraccionarios</li>
+                        <li>int: un entero (un número no fraccionario)</li>
+                        <li>uint: un entero sin signo, es decir, que no puede ser negativo</li>
+                        <li>Boolean: un valor true (verdadero) o false (falso), por ejemplo, si un conmutador está activado o si dos valores son iguales</li>
+                    </ul><br> <br>
+
+                    El tipo de datos sencillo representa a un solo elemento de información: por ejemplo, un único número o una sola secuencia de texto. Sin embargo, la mayoría de los tipos de datos definidos en ActionScript son tipos de datos complejos. Representan un conjunto de valores en un solo contenedor. Por ejemplo, una variable con el tipo de datos Date representa un solo valor (un momento temporal). No obstante, ese valor de fecha se representa en forma de diferentes valores: el día, el mes, el año, las horas, los minutos, los segundos, etc., los cuales son números individuales. Generalmente una fecha se suele percibir como un solo valor que se puede tratar como tal creando una variable Date. Sin embargo, internamente el equipo lo considera un grupo de varios valores que conjuntamente definen una sola fecha.<br><br>
+
+                    La mayoría de los tipos de datos incorporados y los tipos de datos definidos por los programadores son complejos. Algunos de los tipos de datos complejos que podrían reconocerse son:<br><br>
+
+                    <ul>
+                        <li>MovieClip: un símbolo de clip de película</li>
+                        <li>TextField: un campo de texto dinámico o de texto de entrada</li>
+                        <li>SimpleButton: un símbolo de botón</li>
+                        <li>Date: información sobre un solo momento temporal (una fecha y hora)</li>
+                    </ul><br><br>
+
+                    Para referirse a los tipos de datos, a menudo se emplean como sinónimos las palabras clase y objeto. Una clase es simplemente una definición de un tipo de datos. Se trata de una especie de plantilla para todos los objetos del tipo de datos, como afirmar que “todas las variables del tipo de datos Example tienen estas características: A, B y C”. Por otra parte, un objeto es una instancia real de una clase. Por ejemplo, una variable cuyo tipo de datos sea MovieClip se podrá describir como un objeto MovieClip. Se puede decir lo mismo con distintos enunciados:<br>
+
+                    El tipo de datos de la variable myVariable es Number.<br>
+
+                    La variable myVariable es una instancia de Number.<br>
+
+                    La variable myVariable es un objeto Number.<br>
+
+                    La variable myVariable es una instancia de la clase Number.<br>
+
+                </p>
+                <i>https://help.adobe.com/es_ES/as3/learn/WS5b3ccc516d4fbf351e63e3d118a9b90204-7fe0.html</i><br><br> 
+                    
                 <li>Semejanzas y diferencias con javascript</li><br>
                 <p>En primer lugar, ActionScript 3 y JavaScript están definidos en ECMA-262, por lo que tienen mucho en común. Ambos lenguajes cuentan con herencia de prototipos, por ejemplo. Sin embargo, no es correcto que ActionScript implemente completamente ES4.<br>
                 
@@ -134,12 +209,73 @@
                 <li>Trabajo con objetos y símbolos</li><br>
                 <p>Con ActionScript®, se pueden controlar los símbolos en tiempo de ejecución. Con Actionscript, es posible crear interacción y agregar otras funcionalidades a los archivos FLA que no es posible conseguir únicamente con la línea de tiempo.</p>
                 <i>https://helpx.adobe.com/mx/animate/using/symbols-actionscript.html</i><br><br> 
+            </ol>
+
+            <h4>Unidad 2</h4>
+            <ol>
+                <li>Diseño de entornos virtuales</li>
+                <li>Aplicación de la programación para el diseño de escenarios  </li>
+                <li>Desplazamientos</li>
+                <li>Recorridos </li>
+                <li>Scroll</li>
+                <li>Ubicación por medio de propiedades X y Y </li>
+            </ol>
+
+            <h4>Unidad 3</h4>
+            <ol>
+                <li>Herramientas de programación orientadas a la interactividad </li><br>
+                <p>Además de ActionScript® también podemos generar interactividad usando JavaScript Animate tiene la posibilidad de trabajar con estas dos herramientas de programación. </p>
+                <li>Declaración de funciones</li><br>
+                <p>Una función es la unidad básica de código que puede invocarse en ActionScript. Tanto las funciones definidas por el usuario como las funciones incorporadas de ActionScript se representan mediante objetos Function, que son instancias de la función Function.</p>
+                <i>https://help.adobe.com/es_ES/FlashPlatform/reference/actionscript/3/Function.html</i><br><br> 
+
+                <li>Asignación de funciones</li>
+                <p>En ActionScript 3.0 las funciones son objetos. Al crear una función, se crea un objeto que no sólo se puede pasar como un parámetro a otra función, sino que además tiene propiedades y métodos asociados.</p>
+                <i>https://help.adobe.com/es_ES/as3/learn/WS5b3ccc516d4fbf351e63e3d118a9b90204-7fd0.html</i><br><br> 
+                
+
+                <li>Operadores matemáticos </li>
+                <p>los operadores matemáticos son los siguientes:<br>
+                    <ul>
+                        <li>+ adicción</li>
+                        <li>-- decremento</li>
+                        <li>/ división</li>
+                        <li>++ incremento</li>
+                        <li>% modulo</li>
+                        <li>* multiplicación</li>
+                        <li>- substracción</li>
+                    </ul><br>
+                    <i>https://help.adobe.com/es_ES/FlashPlatform/reference/actionscript/3/operators.html</i><br><br> 
+                </p>
+                <li>Ciclos de control</li>
+                <li>Bucles</li> <br>
+                <p>Las sentencias de bucle permiten ejecutar un bloque específico de código repetidamente utilizando una serie de valores o variables. Adobe recomienda escribir siempre el bloque de código entre llaves ({}). Aunque puede omitir las llaves si el bloque de código sólo contiene una sentencia, no es recomendable que lo haga por la misma razón expuesta para las condicionales: aumenta la posibilidad de que las sentencias añadidas posteriormente se excluyan inadvertidamente del bloque de código. Si posteriormente se añade una sentencia que se desea incluir en el bloque de código, pero no se añaden las llaves necesarias, la sentencia no se ejecutará como parte del bucle.</p>
+                <i>https://help.adobe.com/es_ES/as3/learn/WS5b3ccc516d4fbf351e63e3d118a9b90204-7fcf.html</i><br><br> 
+
+                <li>Funciones dinámicas</li>
+                <p>
+                    Hay dos formas de definir una función en ActionScript 3.0: se puede utilizar una sentencia de función o una expresión de función. La técnica que se elija dependerá de si se prefiere un estilo de programación más estático o más dinámico. Si se prefiere la programación estática, o en modo estricto, se deben definir las funciones con sentencias de función. Las funciones deben definirse con expresiones de función si existe la necesidad específica de hacerlo. Las expresiones de función se suelen usar en programación dinámica (en modo estándar).
+                </p>
+                
+                <h4>Unidad 4</h4>
+            <ol>
+                <li>Creación de interfaces dinámicas multimedia </li><br>
+                <p>La creación de interfaces dinámicas, se logra con la integración de elemento gráficos y programación. dentro de las nuevas tendencias de user interfaces (UI) es que en la actualidad se esta usando.</p>
+                <li>Planos y profundidad </li><br>
+                    <p> El Efecto de profundidad de campo (parallax effect) en bastante sencillo de hacer usando interpolaciones de movimiento sencillas. no requiriendo usar código</p>
+                <li>Selección múltiple</li>
+                <li>Controles de audio</li><br>
+                <img src="./assets/audio y video.png"><br><br>
+                <p> Por medio de los segmentos de código podemos ampliar las funcionalidades del audio y del video</p>
+                <li>Controles de video</li>
+                <img src="./assets/componente.png"><br><br>
+                <p>Existe en ActionScript® también los componentes que nos permiten agregar video sin usar código</p>
+                <li>Creación de archivos y formatos para distribución</li><br>
+                <p>En Animate tenemos la posibilidad de generar distinos archivos para distibución, desde HTML con JavaScript, pasando por AIR tecnologia de Adobe y poder empaquetar los archivos para producir una APK que se suba a Play Store y a  App Store, también ya hay un nuevo jugador en la escena que es App Gallery de Huawei, para poder hacer esto tienes que tener cuenta de desarrollador en las tres plataformas.</p>
 
             </ol>
 
         </div>
-
-        
 
     </div>
     
